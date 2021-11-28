@@ -1,7 +1,9 @@
 # rotating-shape
-<img width="992" alt="rotating shpe gif" src="./assets/rotating_shape.gif">
-<img width="992" alt="rotating_shape" src="./assets/rotating_shape.png">
+<img width="900" alt="rotating shpe gif" src="./assets/rotating_shape.gif">
+<img width="900" alt="rotating_shape" src="./assets/rotating_shape.png">
 
+## Applied version
+<img width="900" alt="rotating shpe gif" src="./assets/rotating_shape_applied.gif">
 
 ## 코드 공부 내용
 https://sand-niece-09d.notion.site/rotating-shape-2f1175af2e6948f98ea9373b5b5250ed
