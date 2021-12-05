@@ -9,6 +9,8 @@ class App {
 
         document.body.appendChild(this.canvas);
 
+        this.pixelRatio = 2;
+
         window.addEventListener('resize', this.resize.bind(this), false);
         this.resize();
         
@@ -33,18 +35,15 @@ class App {
         this.stageWidth = document.body.clientWidth;
         this.stageHeight = document.body.clientHeight;
 
-        this.canvas.width = this.stageWidth * 2;
-        this.canvas.height = this.stageHeight * 2;
+        this.canvas.width = this.stageWidth * this.pixelRatio;
+        this.canvas.height = this.stageHeight * this.pixelRatio;
 
-        this.ctx.scale(2, 2);
+        this.ctx.scale(this.pixelRatio, this.pixelRatio);
     }
 
     animate() {
         window.requestAnimationFrame(this.animate.bind(this));
         this.ctx.clearRect(0, 0, this.stageWidth, this.stageHeight);
-
-        this.moveX *= 1.5;
-        this.moveY *= 1.5;
 
         this.block.animate(this.ctx, this.moveX, this.moveY);
         this.ball.draw(this.ctx, this.stageWidth, this.stageHeight, this.block);
@@ -65,8 +64,8 @@ class App {
 
     onMove(e) {
         if(this.isDown && this.isRect) {
-            this.moveX = (e.clientX - this.rect.left) - this.offsetX;
-            this.moveY = (e.clientY - this.rect.top) - this.offsetY;
+            this.moveX = ((e.clientX - this.rect.left) - this.offsetX)*this.pixelRatio;
+            this.moveY = ((e.clientY - this.rect.top) - this.offsetY)*this.pixelRatio;
             
             this.offsetX = e.clientX - this.rect.left;
             this.offsetY = e.clientY - this.rect.top;
