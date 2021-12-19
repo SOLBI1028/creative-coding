@@ -1,5 +1,7 @@
 # gradient
-<img width="900" alt="gradient gif" src="./assets/gradient.gif">
+
+https://user-images.githubusercontent.com/75013515/146669719-09c1e857-5201-43cf-bc37-c809e0a382b7.mov
+
 
 ## 코드 공부 내용
 https://sand-niece-09d.notion.site/4-gradient-5e041b83209c4d74a7fc2bb6a238d3d0
